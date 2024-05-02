@@ -1,11 +1,14 @@
 class_name  spiral_spawner 
 extends Node2D
 
-@export var radius:float=100
-@export var count:int=10
+@export var radius:float=400
+
 @export var ele_scene:PackedScene
 
-func spawn_godots():	
+
+func spawn_godots():		
+	var count:int=$"../CanvasLayer/HSlider".value
+
 	var theta_inc = PI * 2.0 / float(count)
 	for i in range(count):
 		var x = sin(theta_inc * i) * radius
@@ -26,10 +29,17 @@ func _process(delta):
 
 
 func _on_button_pressed():
+	print("pressed")
 	spawn_godots()
 	pass # Replace with function body.
 
 
 func _on_h_slider_value_changed(value):
 	$"../CanvasLayer/Label2".text = str(value)
+	pass # Replace with function body.
+
+
+func _on_button_button_down():
+	print("Button down")
+	spawn_godots()
 	pass # Replace with function body.

@@ -4,17 +4,16 @@
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jwpbk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3shw3"]
-size = Vector2(1760.5, 1294.75)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgqmp"]
+size = Vector2(121, 116)
 
-[node name="ele" type="Node2D"]
+[node name="ele" type="RigidBody2D"]
+mass = 0.01
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_jwpbk")
 texture = ExtResource("1_uxvcw")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(7.75, 12.625)
-shape = SubResource("RectangleShape2D_3shw3")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 3)
+shape = SubResource("RectangleShape2D_hgqmp")
