@@ -2,7 +2,7 @@
 
 Watch this video (click the image): 
 
-https://youtu.be/dccz5Wc2Cs8
+[![YouTube](http://img.youtube.com/vi/dccz5Wc2Cs8/0.jpg)](https://www.youtube.com/watch?v=dccz5Wc2Cs8)
 
 ## Instructions
 
