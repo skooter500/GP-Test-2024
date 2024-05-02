@@ -10,6 +10,8 @@ size = Vector2(121, 116)
 
 [node name="ele" type="RigidBody2D"]
 mass = 0.01
+max_contacts_reported = 1
+contact_monitor = true
 script = ExtResource("1_71f22")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

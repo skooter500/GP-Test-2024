@@ -3,12 +3,12 @@
 [ext_resource type="Script" path="res://spiral_spawner.gd" id="1_yr50h"]
 [ext_resource type="PackedScene" uid="uid://b1jd2temn5pdx" path="res://ele.tscn" id="2_l0h2f"]
 [ext_resource type="Texture2D" uid="uid://rb8smo0f45mc" path="res://icon.svg" id="3_elb3r"]
+[ext_resource type="Texture2D" uid="uid://mxxn1wfdfuli" path="res://sprites/10x10.png" id="4_18l83"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dnsko"]
 
-[sub_resource type="ImageTexture" id="ImageTexture_ooxyo"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfmxy"]
+size = Vector2(1402, 132)
 
 [node name="root" type="Node2D"]
 
@@ -54,12 +54,15 @@ ele_scene = ExtResource("2_l0h2f")
 texture = ExtResource("3_elb3r")
 
 [node name="ground" type="StaticBody2D" parent="."]
+position = Vector2(502, 949)
 
 [node name="ground" type="Sprite2D" parent="ground"]
 material = SubResource("CanvasItemMaterial_dnsko")
-texture = SubResource("ImageTexture_ooxyo")
+scale = Vector2(137.8, 10.9)
+texture = ExtResource("4_18l83")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
+position = Vector2(-15, -4)
 shape = SubResource("RectangleShape2D_yfmxy")
 
 [connection signal="value_changed" from="CanvasLayer/HSlider" to="spiral_spawner" method="_on_h_slider_value_changed"]

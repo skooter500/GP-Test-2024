@@ -5,7 +5,6 @@ extends Node2D
 
 @export var ele_scene:PackedScene
 
-
 func spawn_godots():		
 	var count:int=$"../CanvasLayer/HSlider".value
 
