@@ -29,6 +29,16 @@ There are examples of most of the above in the repo and you can use the followin
 
 If you are stuck on something feel free to ask me
 
+You will need to use the following nodes:
+
+- CanvasLayer
+- HSlider
+- Label
+- Button
+- Sprite2D
+- CollisionShape2D
+- RigidBody2D
+
 ## Marking scheme
 
 | Marks | Description |
