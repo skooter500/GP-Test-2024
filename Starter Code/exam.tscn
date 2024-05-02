@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bunyohpobvu8b"]
+[gd_scene load_steps=4 format=3 uid="uid://bunyohpobvu8b"]
 
 [ext_resource type="Script" path="res://spiral_spawner.gd" id="1_yr50h"]
+[ext_resource type="PackedScene" uid="uid://b1jd2temn5pdx" path="res://ele.tscn" id="2_l0h2f"]
+[ext_resource type="Texture2D" uid="uid://rb8smo0f45mc" path="res://icon.svg" id="3_elb3r"]
 
 [node name="root" type="Node2D"]
-script = ExtResource("1_yr50h")
-radius = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -35,3 +35,14 @@ offset_top = 104.0
 offset_right = 191.0
 offset_bottom = 135.0
 text = "Create Nodes"
+
+[node name="spiral_spawner" type="Node2D" parent="."]
+position = Vector2(518, 410)
+script = ExtResource("1_yr50h")
+ele_scene = ExtResource("2_l0h2f")
+
+[node name="Sprite2D" type="Sprite2D" parent="spiral_spawner"]
+texture = ExtResource("3_elb3r")
+
+[connection signal="value_changed" from="CanvasLayer/HSlider" to="spiral_spawner" method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="spiral_spawner" method="_on_button_pressed"]
